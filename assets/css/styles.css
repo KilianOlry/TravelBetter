@@ -1,3 +1,28 @@
+@font-face {
+  font-family: "Proxima Nova Rg";
+  src: url("../fonts/proximanova_regular.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Proxima Nova Rg, sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: pink;
+}
 
 /*# sourceMappingURL=styles.css.map */
