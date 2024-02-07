@@ -8,7 +8,12 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
+  background-color: #eae8e2;
   font-family: Proxima Nova Rg, sans-serif;
 }
 
@@ -24,22 +29,6 @@ a {
 .container {
   max-width: 1000px;
   margin: 0 auto;
-}
-
-h1 {
-  color: #3c3936;
-}
-
-body {
-  background-color: #eae8e2;
-}
-
-main {
-  min-width: 100vh;
-}
-
-h1 {
-  text-align: center;
 }
 
 .presentation {
@@ -63,9 +52,11 @@ h1 {
 .presentation__details {
   flex-basis: 400px;
   letter-spacing: 0.2rem;
+  font-size: 1.5rem;
 }
 .presentation__details__title {
   margin-bottom: 3rem;
+  font-size: 3rem;
 }
 .presentation__details__link {
   padding: 1rem 2rem;
@@ -74,6 +65,19 @@ h1 {
   background-color: #4296a0;
   color: #eae8e2;
   border-radius: 0.1rem;
+}
+
+h1 {
+  color: #3c3936;
+}
+
+main {
+  min-width: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

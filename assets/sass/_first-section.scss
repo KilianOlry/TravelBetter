@@ -1,0 +1,35 @@
+.presentation{
+    margin-block: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    height: 50vh;
+    &__image{
+        background-image: url('../images/bg.webp');
+        border-radius: 50%;
+        background-position: right;
+        background-size: cover;
+        width: 500px;
+        height: 500px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    &__details{
+        flex-basis: 400px;
+        letter-spacing: .2rem;
+        font-size: $paragraph;
+        &__title{
+            margin-bottom: 3rem;
+            font-size: $title-h2;
+        }
+        &__link{
+            padding: 1rem 2rem;
+            display: inline-block;
+            margin-top: 1rem;
+            background-color: $test;
+            color: $secondary-color;
+            border-radius: .1rem;
+        }
+    }
+}
