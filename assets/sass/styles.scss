@@ -1,14 +1,7 @@
-@import 'font';
-@import 'variables';
-@import 'reset';
-@import 'first-section';
-h1{
-    color: $text-primary;
-}
-main{
-    min-width: 100vh;
-}
-h1{
-    text-align: center;
-    font-size: $title-h1;
-}
+@import "font";
+@import "variables";
+@import "reset";
+@import "header";
+@import "first-section";
+
+

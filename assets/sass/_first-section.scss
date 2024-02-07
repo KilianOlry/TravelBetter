@@ -30,6 +30,19 @@
             background-color: $test;
             color: $secondary-color;
             border-radius: .1rem;
+            transition: .5s;
+            text-transform: capitalize;
+            i{
+                visibility: hidden;
+                transition: inherit ease-in-out;
+            }
+            &:hover{
+                transform: scale(1.1);
+                i{
+                    visibility: visible;
+                    transform: scale(1.2);
+                }
+            }
         }
     }
 }

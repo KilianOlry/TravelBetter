@@ -31,6 +31,19 @@ a {
   margin: 0 auto;
 }
 
+main {
+  min-width: 100vh;
+}
+
+header {
+  padding: 1rem;
+}
+header h1 {
+  text-align: center;
+  font-size: 5rem;
+  color: #3c3936;
+}
+
 .presentation {
   margin-block: 5rem;
   display: flex;
@@ -65,19 +78,19 @@ a {
   background-color: #4296a0;
   color: #eae8e2;
   border-radius: 0.1rem;
+  transition: 0.5s;
+  text-transform: capitalize;
 }
-
-h1 {
-  color: #3c3936;
+.presentation__details__link i {
+  visibility: hidden;
+  transition: inherit ease-in-out;
 }
-
-main {
-  min-width: 100vh;
+.presentation__details__link:hover {
+  transform: scale(1.1);
 }
-
-h1 {
-  text-align: center;
-  font-size: 5rem;
+.presentation__details__link:hover i {
+  visibility: visible;
+  transform: scale(1.2);
 }
 
 /*# sourceMappingURL=styles.css.map */
