@@ -3,13 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-    font-family: Proxima Nova Rg, sans-serif;
+body {
+  font-family: Proxima Nova Rg, sans-serif;
 }
 ol,
 ul {
   list-style: none;
 }
 a {
-    text-decoration: none;
-  }
+  text-decoration: none;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}

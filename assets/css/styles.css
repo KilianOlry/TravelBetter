@@ -21,8 +21,59 @@ a {
   text-decoration: none;
 }
 
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 h1 {
-  color: pink;
+  color: #3c3936;
+}
+
+body {
+  background-color: #eae8e2;
+}
+
+main {
+  min-width: 100vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+.presentation {
+  margin-block: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  height: 50vh;
+}
+.presentation__image {
+  background-image: url("../images/bg.webp");
+  border-radius: 50%;
+  background-position: right;
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.presentation__details {
+  flex-basis: 400px;
+  letter-spacing: 0.2rem;
+}
+.presentation__details__title {
+  margin-bottom: 3rem;
+}
+.presentation__details__link {
+  padding: 1rem 2rem;
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #4296a0;
+  color: #eae8e2;
+  border-radius: 0.1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
