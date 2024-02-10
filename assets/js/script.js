@@ -71,9 +71,25 @@ const Site = class {
     `;
   }
 
+  renderSecondSection() {
+    return `
+    <section class="form-container container" id="form">
+      <h2 class="title__section">votre destination</h2>
+      <h3 class="title__section">Veuillez saisir la ville de destination</h3>
+      <form action="">
+          <div class="form__city">
+              <input type="text" id="cityName" placeholder="ville de destination ?">
+          </div>
+          <button type="submit" id="validation">valider</button>
+      </form>
+    </section>
+    `;
+  }
+
   run() {
     this.el.innerHTML = this.renderHeader();
     this.el.innerHTML += this.renderFirstSection();
+    this.el.innerHTML += this.renderSecondSection();
   }
 };
 
