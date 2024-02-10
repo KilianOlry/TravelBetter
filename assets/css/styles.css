@@ -28,7 +28,7 @@ a {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -129,6 +129,10 @@ header {
   transition: 0.5s;
   cursor: pointer;
   text-transform: capitalize;
+}
+.form-container__pictures {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=styles.css.map */

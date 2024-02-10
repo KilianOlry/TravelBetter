@@ -36,4 +36,8 @@
             text-transform: capitalize;
         }
     }
+    &__pictures{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
