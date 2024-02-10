@@ -1,25 +1,3 @@
-// let btn = document.getElementById("validation");
-
-// btn.addEventListener("click", (event) => {
-//   event.preventDefault();
-
-//   let cityName = document.getElementById("cityName").value;
-
-//   callOPenWeather(cityName);
-//   callUnsplash(cityName);
-// });
-
-// function callOPenWeather(cityName) {
-//   const ApiKey = "";
-//   call = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${ApiKey}`;
-//   fetch(call)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       console.log(data);
-//     })
-//     .catch((error) => alert("Erreur : " + error));
-// }
-
 // function callUnsplash(cityName) {
 //   apiKeyUnsplash = "";
 //   call = `https://api.unsplash.com/search/photos?page=1&query=${cityName}&client_id=${apiKeyUnsplash}`;
@@ -73,7 +51,7 @@ const Site = class {
 
   renderSecondSection() {
     return `
-    <section class="form-container container" id="form">
+    <section class="form-container" id="form">
       <h2 class="title__section">votre destination</h2>
       <h3 class="title__section">Veuillez saisir la ville de destination</h3>
       <form action="">
@@ -82,8 +60,36 @@ const Site = class {
           </div>
           <button type="submit" id="validation">valider</button>
       </form>
+      <div class="form-container__pictures" id="picturesCity">
+        ${this.callPicturesrandom()}
+      </div>
     </section>
     `;
+  }
+
+  callPicturesrandom(){
+    const apiKey = '';
+    let call = `https://api.unsplash.com/photos/random/?query=city&orientation=landscape&count=8&client_id=${apiKey}`;
+    fetch(call)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      this.renderPicturesRandom(data);
+    })
+    .catch((error) => alert("Erreur : " + error));
+  }
+
+  renderPicturesRandom(data){
+    let container = document.getElementById('picturesCity');
+    data.forEach(item => {
+      container.innerHTML += `
+        <article>
+          <img src="${item.urls.small}" alt="${item.alt_description}">
+          <p>${item.location.city}</p>
+        </article>
+      `
+      return container;
+    });
   }
 
   run() {
@@ -91,7 +97,31 @@ const Site = class {
     this.el.innerHTML += this.renderFirstSection();
     this.el.innerHTML += this.renderSecondSection();
   }
+
+
 };
 
 let render = new Site();
 render.run();
+
+let btn = document.getElementById("validation");
+
+btn.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  let cityName = document.getElementById("cityName").value;
+
+  callOpenWeather(cityName);
+  // callUnsplash(cityName);
+});
+
+function callOpenWeather(cityName) {
+  const ApiKey = "";
+  call = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${ApiKey}`;
+  fetch(call)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => alert("Erreur : " + error));
+}
