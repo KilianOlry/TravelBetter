@@ -73,7 +73,6 @@ const Site = class {
     fetch(call)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       this.renderPicturesRandom(data);
     })
     .catch((error) => alert("Erreur : " + error));
@@ -83,8 +82,7 @@ const Site = class {
     let container = document.getElementById('picturesCity');
     data.forEach(item => {
       container.innerHTML += `
-        <article>
-          <img src="${item.urls.small}" alt="${item.alt_description}">
+        <article class= "pictureRandomCity" style="background-image: url(${item.urls.small});">
           <p>${item.location.city}</p>
         </article>
       `

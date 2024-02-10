@@ -93,7 +93,6 @@ header {
 
 .form-container {
   min-height: 100vh;
-  position: relative;
 }
 .form-container h3 {
   font-size: 2.5rem;
@@ -132,7 +131,25 @@ header {
 }
 .form-container__pictures {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.form-container__pictures .pictureRandomCity {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form-container__pictures .pictureRandomCity p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=styles.css.map */
