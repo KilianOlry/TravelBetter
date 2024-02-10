@@ -1,38 +1,81 @@
-let btn = document.getElementById("validation");
+// let btn = document.getElementById("validation");
 
-btn.addEventListener("click", (event) => {
-  event.preventDefault();
+// btn.addEventListener("click", (event) => {
+//   event.preventDefault();
 
-  let cityName = document.getElementById("cityName").value;
+//   let cityName = document.getElementById("cityName").value;
 
-  callOPenWeather(cityName);
-  callUnsplash(cityName);
-});
+//   callOPenWeather(cityName);
+//   callUnsplash(cityName);
+// });
 
-function callOPenWeather(cityName) {
-  const ApiKey = "";
-  call = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${ApiKey}`;
-  fetch(call)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => alert("Erreur : " + error));
-}
+// function callOPenWeather(cityName) {
+//   const ApiKey = "";
+//   call = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${ApiKey}`;
+//   fetch(call)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log(data);
+//     })
+//     .catch((error) => alert("Erreur : " + error));
+// }
 
-function callUnsplash(cityName) {
-  apiKeyUnsplash = "";
-  call = `https://api.unsplash.com/search/photos?page=1&query=${cityName}&client_id=${apiKeyUnsplash}`
-  fetch(call)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-        test(data.results[0].urls.small);
-    })
-    .catch((error) => alert("Erreur : " + error));
-}
+// function callUnsplash(cityName) {
+//   apiKeyUnsplash = "";
+//   call = `https://api.unsplash.com/search/photos?page=1&query=${cityName}&client_id=${apiKeyUnsplash}`;
+//   fetch(call)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log(data);
+//       test(data.results[0].urls.small);
+//     })
+//     .catch((error) => alert("Erreur : " + error));
+// }
 
-function test(data) {
-  let img = document.getElementById("img");
-  img.setAttribute("src", data);
-}
+// function test(data) {
+//   let img = document.getElementById("img");
+//   img.setAttribute("src", data);
+// }
+
+const Site = class {
+  constructor() {
+    this.el = document.getElementById("root");
+  }
+
+  renderHeader() {
+    return `
+    <header>
+      <h1 class="title__section">Onygo</h1>
+    </header>
+    `;
+  }
+
+  renderFirstSection() {
+    return `
+    <section class="presentation container">
+      <div class="presentation__details">
+          <h2 class="presentation__details__title">Envie de décompresser</h2>
+          <p class="presentation__details__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ut
+              similique, sequi omnis quaerat hic minus molestiae eius, accusamus reiciendis dignissimos explicabo
+              officia quae minima velit veniam praesentium perspiciatis aspernatur vitae nam itaque dolorem!
+              Doloribus.</p>
+          <a href="#form" class="presentation__details__link">destination
+              <i class="ri-arrow-down-line"></i>
+          </a>
+      </div>
+
+      <aside class="presentation__image">
+
+      </aside>
+    </section>
+    `;
+  }
+
+  run() {
+    this.el.innerHTML = this.renderHeader();
+    this.el.innerHTML += this.renderFirstSection();
+  }
+};
+
+let render = new Site();
+render.run();
