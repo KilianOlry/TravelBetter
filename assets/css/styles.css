@@ -10,6 +10,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -31,27 +32,24 @@ a {
   margin: 0 auto;
 }
 
-main {
-  min-width: 100vh;
-}
-
-header {
-  padding: 1rem;
-}
-header h1 {
+.title__section {
+  text-transform: capitalize;
   text-align: center;
   font-size: 5rem;
   color: #3c3936;
 }
 
+header {
+  padding: 1rem;
+}
+
 .presentation {
-  margin-block: 5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  height: 50vh;
+  height: calc(100vh - 80.67px);
 }
 .presentation__image {
   background-image: url("../images/bg.webp");
@@ -91,6 +89,46 @@ header h1 {
 .presentation__details__link:hover i {
   visibility: visible;
   transform: scale(1.2);
+}
+
+.form-container {
+  min-height: 100vh;
+  position: relative;
+}
+.form-container h3 {
+  font-size: 2.5rem;
+  letter-spacing: 0.8rem;
+  margin-block: 2rem;
+}
+.form-container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form-container form .form__city {
+  margin-block: 2rem;
+}
+.form-container form .form__city #cityName {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 1rem 2rem;
+}
+.form-container form .form__city #cityName:focus, .form-container form .form__city #cityName:focus-within {
+  border-bottom: 1px solid black;
+}
+.form-container form #validation {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  margin-top: 1rem;
+  background-color: #4296a0;
+  color: #eae8e2;
+  border-radius: 0.1rem;
+  transition: 0.5s;
+  cursor: pointer;
+  text-transform: capitalize;
 }
 
 /*# sourceMappingURL=styles.css.map */

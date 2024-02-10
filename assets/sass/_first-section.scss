@@ -1,11 +1,10 @@
 .presentation{
-    margin-block: 5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    height: 50vh;
+    height: calc(100vh - 80.67px);
     &__image{
         background-image: url('../images/bg.webp');
         border-radius: 50%;

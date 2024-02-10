@@ -5,10 +5,10 @@
 }
 html{
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   background-color: $secondary-color;
-
   font-family: $font-family;
 }
 ol,
@@ -22,6 +22,9 @@ a {
     max-width: 1000px;
     margin: 0 auto;
 }
-main {
-  min-width: 100vh;
+.title__section {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: $title-h1;
+  color: $text-primary;
 }

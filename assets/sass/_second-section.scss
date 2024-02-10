@@ -1,0 +1,39 @@
+.form-container{
+    min-height: 100vh;
+    position: relative;
+    h3{
+        font-size: $title-h3;
+        letter-spacing: .8rem;
+        margin-block: 2rem;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .form__city{
+            margin-block: 2rem;
+            #cityName{
+                outline: none;
+                border: none;
+                background-color: transparent;
+                padding: 1rem 2rem;
+                &:focus, &:focus-within{
+                    border-bottom: 1px solid black;
+                }
+            }
+        }
+        #validation{
+            padding: 1rem 2rem;
+            outline: none;
+            border: none;
+            margin-top: 1rem;
+            background-color: $test;
+            color: $secondary-color;
+            border-radius: .1rem;
+            transition: .5s;
+            cursor: pointer;
+            text-transform: capitalize;
+        }
+    }
+}
