@@ -37,6 +37,7 @@
     }
     &__pictures{
         @include flex-display(row, wrap, center, center);
+        gap: 1rem;
         .pictureRandomCity{
             position: relative;
             width: 300px;
@@ -45,10 +46,22 @@
             background-position: center;
             background-size: cover;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            filter: grayscale(1);
+            transition: .5s;
             p{
-                position: absolute;
-                top: 50%; left: 50%;
-                transform: translate(-50%, -50%);
+                visibility: hidden;
+                font-size: $paragraph;
+                color: $primary-color;
+            }
+            &:hover{
+                filter: grayscale(0);
+                p{
+                    transition: inherit;
+                    visibility: visible;
+                    position: absolute;
+                    top: 50%; left: 50%;
+                    transform: translate(-50%, -50%);
+                }
             }
         }
     }
