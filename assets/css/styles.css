@@ -165,4 +165,13 @@ header {
   transform: translate(-50%, -50%);
 }
 
+.third__section {
+  display: none;
+}
+.third__section__card {
+  width: 500px;
+  padding: 1rem;
+  background-color: red;
+}
+
 /*# sourceMappingURL=styles.css.map */

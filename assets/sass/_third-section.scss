@@ -1,3 +1,8 @@
 .third__section{
     display: none;
+    &__card{
+        width: 500px;
+        padding: 1rem;
+        background-color: red;
+    }
 }
