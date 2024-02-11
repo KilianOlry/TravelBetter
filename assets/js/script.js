@@ -1,20 +1,3 @@
-// function callUnsplash(cityName) {
-//   apiKeyUnsplash = "";
-//   call = `https://api.unsplash.com/search/photos?page=1&query=${cityName}&client_id=${apiKeyUnsplash}`;
-//   fetch(call)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       console.log(data);
-//       test(data.results[0].urls.small);
-//     })
-//     .catch((error) => alert("Erreur : " + error));
-// }
-
-// function test(data) {
-//   let img = document.getElementById("img");
-//   img.setAttribute("src", data);
-// }
-
 const Site = class {
   constructor() {
     this.el = document.getElementById("root");
@@ -66,6 +49,11 @@ const Site = class {
     </section>
     `;
   }
+  renderThirdSection(){
+    return `
+      <section class='third__section container' id='thirdSection'></section>
+    `
+  }
 
   callPicturesrandom(){
     const apiKey = '';
@@ -94,6 +82,7 @@ const Site = class {
     this.el.innerHTML = this.renderHeader();
     this.el.innerHTML += this.renderFirstSection();
     this.el.innerHTML += this.renderSecondSection();
+    this.el.innerHTML += this.renderThirdSection();
   }
 
 
@@ -101,25 +90,3 @@ const Site = class {
 
 let render = new Site();
 render.run();
-
-let btn = document.getElementById("validation");
-
-btn.addEventListener("click", (event) => {
-  event.preventDefault();
-
-  let cityName = document.getElementById("cityName").value;
-
-  callOpenWeather(cityName);
-  // callUnsplash(cityName);
-});
-
-function callOpenWeather(cityName) {
-  const ApiKey = "";
-  call = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${ApiKey}`;
-  fetch(call)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => alert("Erreur : " + error));
-}
